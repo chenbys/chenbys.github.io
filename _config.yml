@@ -12,7 +12,7 @@ github_repo: "https://github.com/chenbys/chenbys.github.io.git" # you code repos
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Goals determine what you going to be!"
-sidebar-avatar: /mimg/main.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: /mimg/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # SNS settings
 RSS: false
