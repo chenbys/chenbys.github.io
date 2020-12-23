@@ -4,7 +4,7 @@ title:      Efficient Semantic Video Segmentation with Per-frame Inference
 subtitle:   ECCV2020
 date:       2020-12-22
 author:     Junjie Chen
-header-img: mimg/post_img/EffiecientNet.jpg
+header-img: mimg/post_img/desk.jpg
 catalog: true
 tags:
     - 2020
