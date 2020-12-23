@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Template
+title:      Experiment Regulation
 subtitle:   
 date:       2020-12-22
 author:     Junjie Chen
@@ -13,25 +13,11 @@ tags:
 # Abstract
 ## Novelty
 Novelty.
-
 ## Contribution
 Contribution.
-
 ## Reliability
 Reliability.
-
 ## Code Link
 Code Link.
-
 ## Paper Link
-Paper Link.
-
-# Notable Point
-## First
-The first notable point.
-
-## Second
-The second notable point.
-
-# Summary
-Summary.
+Paper Link
