@@ -20,6 +20,25 @@ header {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+/* 新增全局容器限制 */
+.container {
+    max-width: 100vw;  /* 新增 */
+    overflow-x: hidden; /* 新增 */
+}
+
+main {
+    max-width: calc(100% - 270px); /* 新增 */
+    box-sizing: border-box;        /* 新增 */
+}
+
+/* 所有区块添加安全边距 */
+.block {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 20px;
+}
+
 a {
   color: #1666b1;
   text-decoration: none;
