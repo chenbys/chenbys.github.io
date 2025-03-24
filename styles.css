@@ -119,8 +119,7 @@ h2::before {
     filter: grayscale(15%);
     transition: filter 0.3s;
 }
-.member p {
-    width:100%;}
+
 .member:hover img {
     filter: grayscale(0%);
 }
