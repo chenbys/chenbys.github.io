@@ -230,8 +230,8 @@ footer {
 }
 
 .member img {
-    width: 150px;
-    height: 210px; 
+    width: 100px;
+    height: 140px; 
     object-fit: cover;
     border-radius: 8px;
     filter: grayscale(20%);
