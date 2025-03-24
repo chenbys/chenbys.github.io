@@ -134,22 +134,26 @@ footer {
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
 
+
+
 .team-members {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
-
+/* 固定图片容器尺寸 */
 .team-members .member {
-    flex: 1 0 18%;
-    text-align: center;
-    margin: 10px;
+    width: 250px;  /* 卡片整体宽度 */
+    margin: 15px;
 }
 
+/* 图片尺寸锁定 */
 .team-members .member img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
+    width: 200px;   /* 固定宽度 */
+    height: 250px;  /* 固定高度 */
+    object-fit: cover; /* 保持比例裁剪 */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .team-photos {
@@ -193,20 +197,7 @@ nav ul li a.active {
     padding: 25px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
-/* 固定图片容器尺寸 */
-.team-members .member {
-    width: 250px;  /* 卡片整体宽度 */
-    margin: 15px;
-}
 
-/* 图片尺寸锁定 */
-.member img {
-    width: 200px;   /* 固定宽度 */
-    height: 250px;  /* 固定高度 */
-    object-fit: cover; /* 保持比例裁剪 */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
 .team-members .member img {
     aspect-ratio: 1/1;
     object-fit: cover;
