@@ -232,6 +232,7 @@ footer {
 }
 
 .member {
+  width: 200px;
   text-align: center; /* 内容居中 */
   padding: 15px;
 }
@@ -241,6 +242,7 @@ footer {
 .member p {
   background: rgba(22,102,177,0.08);
   padding: 8px;
+  justify-content: center;
   border-radius: 6px;
 }
 .member img {
