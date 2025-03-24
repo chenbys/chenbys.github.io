@@ -20,6 +20,63 @@ header {
     border-radius: 0 0 10px 10px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
+a {
+  color: #1666b1;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 3px 5px;
+  border-radius: 4px;
+}
+a:hover {
+  background: rgba(22,102,177,0.1);
+  text-decoration: underline;
+  transform: translateY(-1px);
+}
+
+a:active {
+  transform: translateY(1px);
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#publications a {
+  color: #2c3e50;
+  border-left: 3px solid #3498db;
+  padding-left: 10px;
+  display: block;
+  margin: 5px 0;
+}
+
+#publications a:hover {
+  background: #f8f9fa;
+  border-left-color: #1666b1;
+}
+
+/* 研究方向列表保持无序号 */
+#research ul {
+  list-style: none;
+}
+
+/* 科研成果恢复数字序号 */
+#publications ul {
+  list-style: decimal;
+  padding-left: 2em;
+}
+
+/* 课题项目使用自定义符号 */
+#projects ul {
+  list-style: none;
+  counter-reset: project-counter;
+}
+
+#projects li::before {
+  content: "[" counter(project-counter) "] ";
+  counter-increment: project-counter;
+  color: #1666b1;
+  font-weight: bold;
+}
 
 nav ul {
     list-style: none;
@@ -134,26 +191,33 @@ footer {
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
 
-
-
 .team-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-/* 固定图片容器尺寸 */
-.team-members .member {
-    width: 250px;  /* 卡片整体宽度 */
-    margin: 15px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 25px;
 }
 
-/* 图片尺寸锁定 */
-.team-members .member img {
-    width: 200px;   /* 固定宽度 */
-    height: 250px;  /* 固定高度 */
-    object-fit: cover; /* 保持比例裁剪 */
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+.member {
+  background: #fff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.member:hover {
+  transform: translateY(-5px);
+}
+.member p {
+  background: rgba(22,102,177,0.08);
+  padding: 8px;
+  border-radius: 6px;
+}
+.member img {
+  width: 200px;
+  height: 250px; 
+  object-fit: cover;
+  border-radius: 8px;
+  filter: grayscale(20%); /* 增加学术感 */
 }
 
 .team-photos {
