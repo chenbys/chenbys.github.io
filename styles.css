@@ -193,7 +193,20 @@ nav ul li a.active {
     padding: 25px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.08);
 }
+/* 固定图片容器尺寸 */
+.team-members .member {
+    width: 250px;  /* 卡片整体宽度 */
+    margin: 15px;
+}
 
+/* 图片尺寸锁定 */
+.member img {
+    width: 200px;   /* 固定宽度 */
+    height: 250px;  /* 固定高度 */
+    object-fit: cover; /* 保持比例裁剪 */
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
 .team-members .member img {
     aspect-ratio: 1/1;
     object-fit: cover;
