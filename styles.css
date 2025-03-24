@@ -91,7 +91,12 @@ h2::before {
     background: rgba(66,153,225,0.05);
     transform: translateX(6px);
 }
-
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    text-align: left; /* 添加这行 */
+}
 /* 团队成员卡片优化 */
 .member {
     background: white;
@@ -114,7 +119,8 @@ h2::before {
     filter: grayscale(15%);
     transition: filter 0.3s;
 }
-
+.member p {
+    width:100%;}
 .member:hover img {
     filter: grayscale(0%);
 }
@@ -157,6 +163,5 @@ a {
 }
 
 .profile {
-    border: 1px solid #e2e8f0;
     background: linear-gradient(145deg, #ffffff 0%, #f7fafc 100%);
 }
