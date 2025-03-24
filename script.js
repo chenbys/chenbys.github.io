@@ -1,38 +1,42 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('section');
-    const navLi = document.querySelectorAll('nav ul li a');
+document.addEventListener('DOMContentLoaded', () => {
+    const headerHeight = document.querySelector('header').offsetHeight;
+    const navLinks = [...document.querySelectorAll('nav a')];
+    
+    // 精准激活状态检测
+    function updateActiveNav() {
+        const scrollPos = window.scrollY + headerHeight;
+        
+        document.querySelectorAll('section').forEach(section => {
+            const { top, bottom } = section.getBoundingClientRect();
+            const sectionTop = top + window.scrollY - headerHeight;
+            const sectionBottom = bottom + window.scrollY - headerHeight;
 
-    window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (scrollY >= sectionTop - 60 && scrollY < sectionTop + sectionHeight - 60) {
-                current = section.getAttribute('id');
+            if (scrollPos >= sectionTop && scrollPos < sectionBottom) {
+                const targetLink = navLinks.find(a => 
+                    a.getAttribute('href') === `#${section.id}`
+                );
+                navLinks.forEach(a => a.classList.remove('active'));
+                targetLink?.classList.add('active');
             }
         });
+    }
 
-        navLi.forEach(a => {
-            a.classList.remove('active');
-            if (a.getAttribute('href').includes(current)) {
-                a.classList.add('active');
-                a.style.fontWeight = "bold"; // 修改标记的样式
-            } else {
-                a.style.fontWeight = "normal"; // 重置未标记的样式
-            }
-        });
-    });
-
-    navLi.forEach(a => {
-        a.addEventListener('click', function(e) {
+    // 平滑滚动修正
+    navLinks.forEach(link => {
+        link.addEventListener('click', e => {
             e.preventDefault();
-            const href = this.getAttribute('href');
-            const offsetTop = document.querySelector(href).offsetTop - 60; // 添加偏移量
-            scroll({
-                top: offsetTop,
+            const target = document.querySelector(link.hash);
+            const targetPos = target.offsetTop - headerHeight - 15;
+            
+            window.scrollTo({
+                top: targetPos,
                 behavior: 'smooth'
             });
         });
+    });
+
+    window.addEventListener('scroll', () => {
+        updateActiveNav();
+        requestAnimationFrame(updateActiveNav);
     });
 });
