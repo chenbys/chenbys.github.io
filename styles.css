@@ -224,16 +224,16 @@ footer {
 
 .team-members {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* 减小最小宽度 */
+  gap: 20px;
+  justify-content: center; /* 新增居中 */
+  max-width: 1200px; /* 添加最大宽度限制 */
+  margin: 0 auto; /* 容器居中 */
 }
 
 .member {
-  background: #fff;
+  text-align: center; /* 内容居中 */
   padding: 15px;
-  border-radius: 12px;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s;
 }
 .member:hover {
   transform: translateY(-5px);
@@ -244,8 +244,8 @@ footer {
   border-radius: 6px;
 }
 .member img {
-  width: 200px;
-  height: 250px; 
+  width: 100%;
+  height: 200px; 
   object-fit: cover;
   border-radius: 8px;
   filter: grayscale(20%); /* 增加学术感 */
