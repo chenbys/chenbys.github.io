@@ -31,8 +31,7 @@ header {
 
 main {
     flex: 1;
-    margin-left: 270px;
-    padding: 20px 0;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -129,21 +128,19 @@ nav ul li a.active, nav ul li a:hover {
     background: #0f4b85;
 }
 
+
 aside {
     background: #fff;
     color: #333;
     width: 250px;
     padding: 20px;
     box-sizing: border-box;
-    position: fixed;
-    top: 60px;
-    left:100px;
+    position: relative;
     border-radius: 0 10px 10px 0;
     box-shadow: 4px 0 6px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
 }
-
 aside .aside-content {
     flex-grow: 1;
     display: flex;
