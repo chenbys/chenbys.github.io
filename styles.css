@@ -141,7 +141,6 @@ aside {
     box-shadow: 4px 0 6px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    right: 20px;
 }
 
 aside .aside-content {
