@@ -204,7 +204,7 @@ footer {
     box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
 }
 
-.team-members {
+/**.team-members {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: 20px;
@@ -227,6 +227,36 @@ footer {
     background: rgba(22,102,177,0.08);
     padding: 8px;
     justify-content: center;
+    border-radius: 6px;
+}
+
+.member img {
+    width: 150px;
+    height: 210px; 
+    object-fit: cover;
+    border-radius: 8px;
+    filter: grayscale(20%);
+}*/
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 设置为5列 */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.member {
+    text-align: center;
+    padding: 15px;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+}
+
+.member p {
+    background: rgba(22, 102, 177, 0.08);
+    padding: 8px;
     border-radius: 6px;
 }
 
