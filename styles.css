@@ -234,7 +234,7 @@ footer {
     border-radius: 6px;
 }
 .member p.contact-info {
-    font-size: 0.1em;  /* 缩小字号 */
+    font-size: 6px;  /* 缩小字号 */
     margin: 5px 0;
     overflow-wrap: break-word;  /* 强制换行 */
     max-width: 100%;  /* 限制不超过容器宽度 */
