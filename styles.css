@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     margin: 0;
@@ -8,7 +8,7 @@ body {
     min-height: 100vh;
     background-color: #f8f9fa;
     color: #333;
-}
+} */
 
 header {
     width: 100%;
@@ -21,10 +21,18 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 新增：整体居中 */
+}
+
 .container {
     display: flex;
     margin-top: 60px;
     width: 100%;
+    max-width: 1400px; /* 新增：限制最大宽度 */
+    padding: 0 20px; /* 新增：两侧留白 */
 }
 
 aside {
@@ -33,6 +41,10 @@ aside {
     padding: 20px;
     background: #fff;
     box-shadow: 4px 0 6px rgba(0,0,0,0.1);
+    align-self: flex-start; /* 新增：防止侧边栏拉伸 */
+    position: sticky; /* 新增：保持侧边栏高度自适应 */
+    top: 80px; /* 与header高度匹配 */
+    height: fit-content; /* 新增：高度适应内容 */
 }
 
 main {
