@@ -220,6 +220,8 @@ footer {
 .member {
     text-align: center;
     padding: 15px;
+    max-width: 150px;  /* 限制最大宽度 */
+    word-wrap: break-word;  /* 允许长单词换行 */
 }
 
 .member:hover {
