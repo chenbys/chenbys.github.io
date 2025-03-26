@@ -21,41 +21,39 @@ header {
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
-/* 移除 aside 的 sticky 属性，确保它只是一个块 */
+.container {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 60px;
+    max-width: 100vw;
+    overflow-x: hidden;
+    gap: 20px; /* 可选，用于设置main和aside之间的间距 */
+}
+
 aside {
     background: #fff;
     color: #333;
     width: 250px;
     padding: 20px;
     box-sizing: border-box;
-    /* 去掉 position: sticky 和 top 属性 */
+    position: fixed; /* 修改为fixed，使之固定在页面上 */
+    top: 60px; /* 保持顶部距离，防止被header遮挡 */
+    height: calc(100% - 60px); /* 确保aside高度不超过视窗高度 */
     box-shadow: 4px 0 6px rgba(0,0,0,0.1);
     border-radius: 0 10px 10px 0;
     display: flex;
     flex-direction: column;
 }
 
-/* main 部分的布局调整，增加左边的 margin 保证与 aside 相邻 */
 main {
     flex: 1;
-    margin-left: 250px; /* 改为250px，这样会与 aside 紧挨着 */
+    margin-left: 270px; /* 增加margin确保内容不被aside遮挡 */
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f8f9fa; /* 确保 main 背景是浅色，避免与aside重叠 */
 }
 
-/* container 部分也需要调整，保证 aside 和 main 紧密相连 */
-.container {
-    display: flex;
-    flex-grow: 1;
-    margin-top: 60px; /* 确保header不被遮挡 */
-    max-width: 100vw;
-    overflow-x: hidden;
-    gap: 20px; /* 可以控制main和aside之间的间距 */
-    margin-left: 20px; /* 给整体一个左右的留白 */
-}
 
 
 
