@@ -1,0 +1,18 @@
+@container profile (max-width:800px){.profile-layout{grid-template-columns:minmax(0,1fr);gap:12px}.hero,.profile-identity,.profile-details{display:contents}.profile-details::before{display:none}.profile-heading{grid-column:1;grid-row:1;padding-right:156px;min-height:175px}.portrait-slot{float:none;justify-self:end;align-self:start;grid-column:1;grid-row:1;width:140px;max-width:40%;margin:0}.intro{grid-column:1;grid-row:2;margin:0}.hero-links{grid-column:1;grid-row:3;margin:0;padding-top:0}.profile-history{grid-column:1;grid-row:4;border-top:1px solid var(--line);padding-top:10px}.profile-teaching{grid-column:1;grid-row:5;margin:0;padding-top:0}}
+@container profile (max-width:520px){.profile-layout{padding-block:12px 16px;gap:8px}.portrait-slot{width:112px}.profile-heading{padding-right:124px;min-height:140px}}
+@container profile (max-width:380px){.portrait-slot{width:96px}.profile-heading{padding-right:106px;min-height:120px}}
+@container(max-width:520px){.paper-group-label{display:contents}.paper-group-name{grid-column:2;grid-row:1}.paper-group-stats{display:flex;flex-wrap:wrap;gap:5px 7px;grid-column:1/-1;grid-row:2}.paper-group-action{grid-column:1;grid-row:1}}
+/* One content boundary; fix overflow at its source rather than hiding it. */
+@container(max-width:660px){.paper{padding-block:14px}.venue-name{font-size:29px}.paper-year{font-size:26px}}
+@media(max-width:1100px){.research-stories{grid-template-columns:minmax(0,1fr);gap:0}.research-story{padding-block:14px}.research-story+.research-story{border-top:1px solid var(--line)}}
+@media(max-width:850px){body:has(.chapter-sidebar){padding-inline-start:0}.chapter-sidebar{position:sticky;inset:auto;top:0;width:100%;padding:4px 16px;max-height:75dvh;border-right:0;border-bottom:1px solid var(--line)}.sidebar-heading{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:4px 12px}.brand{font-size:20px}.brand small,.sidebar-caption{display:none}#menu{display:block;min-height:40px;padding:6px;border:0;background:none;font-size:16px;color:var(--ink)}.chapter-sidebar nav{display:none;margin-top:8px;flex-direction:row;flex-wrap:wrap;gap:4px 10px}.chapter-sidebar nav.open{display:flex}.chapter-sidebar nav a{flex:1 1 120px}}
+@media(max-width:600px){h1{font-size:32px}h1 span{font-size:22px}.affiliation{font-size:17px}.intro{font-size:19px}.venue-name{font-size:29px}.paper-year{font-size:26px}}
+@media(max-width:380px){.timeline article{grid-template-columns:minmax(0,1fr)}.brand-mark{padding:5px 8px}}
+@supports not (container-type:inline-size){@media(max-width:984px){.profile-layout{grid-template-columns:minmax(0,1fr);gap:12px}.profile-details{border-top:1px solid var(--line);padding:12px 0 0}.profile-details::before{display:none}}}
+@media(max-width:850px) and (max-height:500px) and (orientation:landscape){.section-context{position:relative;inset:auto}main{padding-top:0}.chapter-sidebar{position:relative;max-height:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.paper-group-toggle,.paper-group-action::before{transition:none}}
+
+@media(max-width:600px){.context-inner{gap:4px 12px;min-height:0;padding-block:4px}.context-inner>strong{font-size:18px;border-right:0;padding-right:0}#section-nav{flex-basis:100%;gap:2px 4px}#section-nav a{font-size:16px;padding:4px 6px}}
+
+@media(max-width:850px){.section-context{left:0}}
+
